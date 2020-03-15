@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <!--css파일 연결 링크 -->
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <title>내 마음대로 쇼핑몰</title>
+
+    <!--구글 폰트-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="product-image"></div>
+      <!--제품 명, 가격 박스 -->
+      <div class="product-info">
+        <span class="product-name">펭수 남극 참치</span>
+        <span class="total-price"> 가격: 1000원/개 </span>
+        <p>
+          제가 좋아하는 펭수, 펭수가 좋아하는 남극 참치. 참치 먹으면서
+          즐코하세요!
+        </p>
+      </div>
+      <div class="order-option">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">주문자 이름</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder=""
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01"
+              >수량</label
+            >
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>수량 선택 필수</option>
+            <option value="1">1개</option>
+            <option value="2">2개</option>
+            <option value="3">3개</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">주소</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="(상세 주소까지 입력 필수)"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">전화번호</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="(-제외하고 입력)"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <center>
+          <button class="btn btn-primary" type="submit">주문하기</button>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>
