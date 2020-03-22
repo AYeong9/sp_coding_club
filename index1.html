@@ -29,6 +29,47 @@
       href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"
       rel="stylesheet"
     />
+    <script>
+      function check_info() {
+        let name = $("#input-name").val();
+        let amount = $("#input-amount").val();
+        let adress = $("#input-adress").val();
+        let phone = $("#input-phone").val();
+
+        if (name == "") {
+          alert("이름을 입력해주세요");
+          $("#input-name").focus();
+          return;
+        } else if (amount == "-- 수량 선택 필수 --") {
+          alert("수량을 선택해주세요");
+          $("#input-amount").focus();
+          return;
+        } else if (adress == "") {
+          alert("주소를 입력해주세요");
+          $("#input-adress").focus();
+          return;
+        } else if (phone == "") {
+          alert("전화번호를 입력해주세요");
+          $("#input-phone").focus();
+          return;
+        }
+      }
+      // } else if (check_phone(phone)){
+      //   alert("잘못된 휴대폰 번호입니다. -를 포함한 번호를 입력하세요");
+      //   return false
+      // }
+
+      // function check_phone() {
+      //   var regExp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+
+      //   if (!regExp.test($("#input-phone").val())) {
+      //     alert(
+      //       "잘못된 휴대폰 번호입니다. 숫자, - 를 포함한 숫자만 입력하세요."
+      //     );
+      //     return false;
+      //   }
+      // }
+    </script>
   </head>
 
   <body>
@@ -49,6 +90,7 @@
             <span class="input-group-text" id="basic-addon1">주문자 이름</span>
           </div>
           <input
+            id="input-name"
             type="text"
             class="form-control"
             placeholder=""
@@ -62,8 +104,12 @@
               >수량</label
             >
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
-            <option selected>수량 선택 필수</option>
+          <select
+            id="input-amount"
+            class="custom-select"
+            id="inputGroupSelect01"
+          >
+            <option selected>-- 수량 선택 필수 --</option>
             <option value="1">1개</option>
             <option value="2">2개</option>
             <option value="3">3개</option>
@@ -74,6 +120,7 @@
             <span class="input-group-text" id="basic-addon1">주소</span>
           </div>
           <input
+            id="input-adress"
             type="text"
             class="form-control"
             placeholder="(상세 주소까지 입력 필수)"
@@ -86,15 +133,18 @@
             <span class="input-group-text" id="basic-addon1">전화번호</span>
           </div>
           <input
+            id="input-phone"
             type="text"
             class="form-control"
-            placeholder="(-제외하고 입력)"
+            placeholder="(-필수 입력)"
             aria-label="Username"
             aria-describedby="basic-addon1"
           />
         </div>
         <center>
-          <button class="btn btn-primary" type="submit">주문하기</button>
+          <button class="btn btn-primary" type="submit" onclick="check_info()">
+            주문하기
+          </button>
         </center>
       </div>
     </div>
