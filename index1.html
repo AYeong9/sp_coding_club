@@ -39,19 +39,15 @@
         if (name == "") {
           alert("이름을 입력해주세요");
           $("#input-name").focus();
-          return;
         } else if (amount == "-- 수량 선택 필수 --") {
           alert("수량을 선택해주세요");
           $("#input-amount").focus();
-          return;
         } else if (adress == "") {
           alert("주소를 입력해주세요");
           $("#input-adress").focus();
-          return;
         } else if (phone == "") {
           alert("전화번호를 입력해주세요");
           $("#input-phone").focus();
-          return;
         }
       }
       // } else if (check_phone(phone)){
@@ -59,16 +55,17 @@
       //   return false
       // }
 
-      // function check_phone() {
-      //   var regExp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+      function check_phone(phone) {
+        var regExp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
 
-      //   if (!regExp.test($("#input-phone").val())) {
-      //     alert(
-      //       "잘못된 휴대폰 번호입니다. 숫자, - 를 포함한 숫자만 입력하세요."
-      //     );
-      //     return false;
-      //   }
-      // }
+        if (!regExp.test(phone)) {
+          alert(
+            "잘못된 휴대폰 번호입니다. 숫자, - 를 포함한 숫자만 입력하세요."
+          );
+          return false;
+        }
+        return true;
+      }
     </script>
   </head>
 
@@ -142,7 +139,11 @@
           />
         </div>
         <center>
-          <button class="btn btn-primary" type="submit" onclick="check_info()">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            onclick="check_info();check_phone();"
+          >
             주문하기
           </button>
         </center>
